@@ -8,7 +8,6 @@ extern crate log;
 // ======= STRUCTS AND ENUMS =======
 
 // ========= MAIN FUNCTION =========
-
 fn main() {
     setup();
 

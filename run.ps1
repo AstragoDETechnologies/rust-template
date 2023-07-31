@@ -43,11 +43,14 @@ for ($i = 0; $i -lt $args.Length; $i++) {
         "-r" {
             $mode = "release"
         }
+        "-re" {
+            $mode = "release"
+        }
         "--release" {
             $mode = "release"
         }
         # Watch?
-        "-W" {
+        "-wa" {
             $watch = "watch"
         }
         "--watch" {
