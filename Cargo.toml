@@ -2,7 +2,7 @@
 name = "{{crate_name}}"
 description = "AstragoDE's Rust Template"
 authors = ["{{authors}}"]
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 readme = "README.md"
 
