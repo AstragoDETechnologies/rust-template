@@ -1,5 +1,5 @@
 [package]
-name = variable::get("crate_name")
+name = {{crate_name}}
 description = "AstragoDE's Rust Template"
 version = "0.1.0"
 edition = "2021"
