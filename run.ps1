@@ -67,19 +67,22 @@ $env:RUST_LOG = $level;
 
 # Watch
 if ($watch -eq "watch") {
+    # Run Program in Release Mode with Watch
     if ($mode -eq "release") {
         cargo watch -c -x "run --release"
     }
+    # Run Program in the Default Mode with Watch
     else {
         cargo watch -c -x "run"
     }
 }
 # No Watch
 else {
-    # Run Program
+    # Run Program in Release Mode
     if ($mode -eq "release") {
         cargo run --release
     }
+    # Run Program in the Default Mode
     else {
         cargo run
     }
