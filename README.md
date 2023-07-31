@@ -3,6 +3,7 @@
 ## About this template
 
 This template contains a basic Rust project with the pretty_env_logger crate and a basic logger setup.
+It is recommended that you use the [Cargo Generate](https://github.com/cargo-generate/cargo-generate) crate to initialize a new project with this template.
 
 ## Adding the template as a favourite to Cargo Generate
 
