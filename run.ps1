@@ -6,6 +6,7 @@ if ($null -ne $env:RUST_LOG) {
 $level = "warn"
 $mode = "default"
 $watch = "default"
+$reset_vars_only = "no"
 
 for ($i = 0; $i -lt $args.Length; $i++) {
     switch ($args[$i]) {
@@ -56,10 +57,18 @@ for ($i = 0; $i -lt $args.Length; $i++) {
         "--watch" {
             $watch = "watch"
         }
+        # Reset Env Variables
+        "-rv" {
+            $reset_vars_only = "yes"
+        }
+        "--reset-vars" {
+            $reset_vars_only = "yes"
+        }
         default {
             $level = "warning"
             $mode = "default"
             $watch = "default"
+            $reset_vars_only = "no"
             Write-Host "Unknown argument: $($args[$i])"
         }
     }
@@ -68,28 +77,30 @@ for ($i = 0; $i -lt $args.Length; $i++) {
 # Set ENV Variables
 $env:RUST_LOG = $level;
 
-# Watch
-if ($watch -eq "watch") {
-    # Run Program in Release Mode with Watch
-    if ($mode -eq "release") {
-        cargo watch -c -x "run --release"
+if ($reset_vars_only -eq "no") {
+    # Watch
+    if ($watch -eq "watch") {
+        # Run Program in Release Mode with Watch
+        if ($mode -eq "release") {
+            cargo watch -c -x "run --release"
+        }
+        # Run Program in the Default Mode with Watch
+        else {
+            cargo watch -c -x "run"
+        }
     }
-    # Run Program in the Default Mode with Watch
+    # No Watch
     else {
-        cargo watch -c -x "run"
-    }
-}
-# No Watch
-else {
-    # Run Program in Release Mode
-    if ($mode -eq "release") {
-        cargo run --release
-    }
-    # Run Program in the Default Mode
-    else {
-        cargo run
-    }
+        # Run Program in Release Mode
+        if ($mode -eq "release") {
+            cargo run --release
+        }
+        # Run Program in the Default Mode
+        else {
+            cargo run
+        }
     
+    }
 }
 
 # Reset Env Variables
