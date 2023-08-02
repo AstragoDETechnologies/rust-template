@@ -74,10 +74,12 @@ for ($i = 0; $i -lt $args.Length; $i++) {
     }
 }
 
-# Set ENV Variables
-$env:RUST_LOG = $level;
-
+# Run Program if not only resetting env variables
 if ($reset_vars_only -eq "no") {
+
+    # Set ENV Variables
+    $env:RUST_LOG = $level;
+
     # Watch
     if ($watch -eq "watch") {
         # Run Program in Release Mode with Watch
