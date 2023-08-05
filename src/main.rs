@@ -1,12 +1,10 @@
-// Import logger crates
-extern crate pretty_env_logger;
-#[macro_use]
+// Import tracing (Logger)
 #[allow(unused_imports)]
-extern crate log;
+use tracing::*;
 
 fn main() {
-    // initialize Logger
-    pretty_env_logger::init_timed();
+    // Initialize tracing (Logger)
+    tracing_subscriber::fmt::init();
 
-    println!("Hello, world!");
+    println!("Hello World!");
 }
