@@ -31,5 +31,5 @@ opt-level = 3
 # ===== DEPENDENCIES =====
 
 [dependencies]
-tracing = "0.1.39"
+tracing = "0.1.40"
 tracing-subscriber = "0.3.17"
