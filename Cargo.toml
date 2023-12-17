@@ -31,7 +31,6 @@ opt-level = 3
 # ===== DEPENDENCIES =====
 
 [dependencies]
+astralib = { git = "https://github.com/AstragoDETechnologies/astralib.git" }
 tracing = "0.1.40"
 tracing-subscriber = "0.3.17"
-
-astralib = { git = "https://github.com/AstragoDETechnologies/astralib.git" }
