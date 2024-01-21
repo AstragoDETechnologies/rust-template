@@ -2,11 +2,16 @@
   deps = [
     # Rust
     pkgs.rustc
-	pkgs.rustfmt
-	pkgs.cargo
-	pkgs.cargo-edit
+	  pkgs.rustfmt
+	  pkgs.cargo
+	  pkgs.cargo-edit
     pkgs.cargo-watch
     pkgs.rust-analyzer
+
+    # Python
+    # pkgs.python312
+    # pkgs.poetry
+    # pkgs.pipx
 
     # Utilities
     pkgs.htop
