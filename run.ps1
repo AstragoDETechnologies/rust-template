@@ -2,6 +2,9 @@
 if ($null -ne $env:RUST_LOG) {
     Remove-Item -Path "Env:RUST_LOG"
 }
+if ($null -ne $env:RUST_BACKTRACE) {
+    Remove-Item -Path "Env:RUST_BACKTRACE"
+}
 
 $level = "warn"
 $backtrace = 0
