@@ -9,10 +9,10 @@
     pkgs.rust-analyzer
 
     # Python
-    # pkgs.python312
-    # pkgs.poetry
-    # pkgs.pipx
-    # pkgs.black
+    pkgs.python312
+    pkgs.poetry
+    pkgs.pipx
+    pkgs.black
 
     # Utilities
     pkgs.htop
