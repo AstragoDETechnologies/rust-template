@@ -12,6 +12,7 @@
     # pkgs.python312
     # pkgs.poetry
     # pkgs.pipx
+    # pkgs.black
 
     # Utilities
     pkgs.htop
