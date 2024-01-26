@@ -4,12 +4,14 @@ if ($null -ne $env:RUST_LOG) {
 }
 
 $level = "warn"
+$backtrace = 0
 $mode = "default"
 $watch = "default"
 $reset_vars_only = "no"
 
 for ($i = 0; $i -lt $args.Length; $i++) {
     switch ($args[$i]) {
+        # Log Level
         "-t" {
             $level = "trace"
         }
@@ -40,7 +42,7 @@ for ($i = 0; $i -lt $args.Length; $i++) {
         "--error" {
             $level = "error"
         }
-        # Mode
+        # Release Mode
         "-r" {
             $mode = "release"
         }
@@ -50,7 +52,14 @@ for ($i = 0; $i -lt $args.Length; $i++) {
         "--release" {
             $mode = "release"
         }
-        # Watch?
+        # Backtrace
+        "-bt" {
+            $backtrace = 1
+        }
+        "--backtrace" {
+            $backtrace = 1
+        }
+        # Watch
         "-wa" {
             $watch = "watch"
         }
@@ -79,6 +88,7 @@ if ($reset_vars_only -eq "no") {
 
     # Set ENV Variables
     $env:RUST_LOG = $level;
+    $env:RUST_BACKTRACE = $backtrace;
 
     # Watch
     if ($watch -eq "watch") {
@@ -108,4 +118,7 @@ if ($reset_vars_only -eq "no") {
 # Reset Env Variables
 if ($null -ne $env:RUST_LOG) {
     Remove-Item -Path "Env:RUST_LOG"
+}
+if ($null -ne $env:RUST_BACKTRACE) {
+    Remove-Item -Path "Env:RUST_BACKTRACE"
 }
