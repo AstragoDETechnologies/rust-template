@@ -23,6 +23,8 @@
         pkgs.pkg-config
       # Console
         pkgs.powershell
+      # FFmpeg
+        pkgs.ffmpeg-full
   ];
   env = {
     # OpenSSL
