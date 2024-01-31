@@ -11,8 +11,18 @@
     # Python
     pkgs.python312
     pkgs.poetry
+    pkgs.python311Packages.fastjsonschema
     pkgs.pipx
     pkgs.black
+    pkgs.tk
+    pkgs.tcl
+    pkgs.qhull
+    pkgs.gtk3
+    pkgs.gobject-introspection
+    pkgs.ghostscript
+    pkgs.freetype
+    pkgs.ffmpeg-full
+    pkgs.cairo
 
     # Utilities
     pkgs.htop
@@ -23,8 +33,6 @@
         pkgs.pkg-config
       # Console
         pkgs.powershell
-      # FFmpeg
-        pkgs.ffmpeg-full
   ];
   env = {
     # OpenSSL
