@@ -1,1 +1,0 @@
-pwsh ./run.ps1
