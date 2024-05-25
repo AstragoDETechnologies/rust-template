@@ -21,11 +21,11 @@
     pkgs.gobject-introspection
     pkgs.ghostscript
     pkgs.freetype
-    pkgs.ffmpeg-full
     pkgs.cairo
 
     # Utilities
     pkgs.htop
+    pkgs.ffmpeg-full
     
     # other Dependencies
       # OpenSSL
