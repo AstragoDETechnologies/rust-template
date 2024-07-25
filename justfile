@@ -31,10 +31,12 @@ error PROFILE="dev":
 
 # == Watch
 
+# Watch for file changes and re-run the program in case they change.
 watch RUST_LOG="default" PROFILE="dev":
     RUST_LOG={{RUST_LOG}} cargo watch -c -x "run --profile {{PROFILE}}"
 
 # ===== Building
 
+# Build the program.
 build PROFILE="dev":
     cargo build --profile {{PROFILE}}
