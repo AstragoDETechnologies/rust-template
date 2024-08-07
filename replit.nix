@@ -35,12 +35,13 @@
 
       # Console
       pkgs.nushell
-      
+
       # Command runner
       pkgs.just
   ];
   env = {
     # OpenSSL
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+    Lib = "${pkgs.openssl.dev}/lib/";
   };
 }
