@@ -12,16 +12,11 @@ readme = "README.md"
 
 # ===== PROFILES =====
 
-# Dev Profile
-
 [profile.dev]
 opt-level = 1
 
 [profile.dev.package."*"]
 opt-level = 2
-
-
-# Release Profile
 
 [profile.release]
 opt-level = 3
