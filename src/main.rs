@@ -1,5 +1,5 @@
 #[allow(unused_imports)]
-use tracing::*;
+use tracing::{debug, error, info, trace, warn};
 
 fn main() {
     // Initialize tracing (Logger)
