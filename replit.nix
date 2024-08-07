@@ -1,27 +1,28 @@
 { pkgs }: {
   deps = [
     # Rust
-    pkgs.rustc
-	  pkgs.rustfmt
 	  pkgs.cargo
 	  pkgs.cargo-edit
+	  pkgs.rustfmt
+    pkgs.cargo-binstall
     pkgs.cargo-watch
     pkgs.rust-analyzer
+    pkgs.rustc
 
     # Python
-    pkgs.python312
-    pkgs.poetry
-    pkgs.python311Packages.fastjsonschema
-    pkgs.pipx
-    pkgs.black
-    pkgs.tk
-    pkgs.tcl
-    pkgs.qhull
-    pkgs.gtk3
-    pkgs.gobject-introspection
-    pkgs.ghostscript
-    pkgs.freetype
+    pkgs.ruff
     pkgs.cairo
+    pkgs.freetype
+    pkgs.ghostscript
+    pkgs.gobject-introspection
+    pkgs.gtk4
+    pkgs.pipx
+    pkgs.poetry
+    pkgs.python312Packages.fastjsonschema
+    pkgs.python313
+    pkgs.qhull
+    pkgs.tcl
+    pkgs.tk
 
     # Utilities
     pkgs.htop
@@ -29,10 +30,14 @@
     
     # other Dependencies
       # OpenSSL
-        pkgs.openssl.dev
-        pkgs.pkg-config
+      pkgs.openssl.dev
+      pkgs.pkg-config
+
       # Console
-        pkgs.powershell
+      pkgs.nushell
+      
+      # Command runner
+      pkgs.just
   ];
   env = {
     # OpenSSL
