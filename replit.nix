@@ -2,12 +2,13 @@
   deps = [
     # Rust
 	  pkgs.cargo
-	  pkgs.cargo-edit
+    pkgs.rustc
 	  pkgs.rustfmt
+	  pkgs.clippy
     pkgs.cargo-binstall
     pkgs.cargo-watch
     pkgs.rust-analyzer
-    pkgs.rustc
+	  pkgs.cargo-edit
 
     # Python
     pkgs.ruff
