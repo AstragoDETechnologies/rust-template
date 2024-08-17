@@ -5,8 +5,6 @@
 This template contains a basic Rust project with the pretty_env_logger crate and a basic logger setup.
 It is recommended that you use the [Cargo Generate](https://github.com/cargo-generate/cargo-generate) crate to initialize a new project with this template.
 
-If you want to use the `--watch` flag of the `run.ps1` script, you need to install [cargo-watch](https://github.com/watchexec/cargo-watch).
-
 ## Using this template
 
 Install [Cargo Generate](https://github.com/cargo-generate/cargo-generate) by running `cargo install cargo-generate` in your terminal.
