@@ -10,21 +10,6 @@
     pkgs.rust-analyzer
     pkgs.rustc
 
-    # Python
-    pkgs.ruff
-    pkgs.cairo
-    pkgs.freetype
-    pkgs.ghostscript
-    pkgs.gobject-introspection
-    pkgs.gtk4
-    pkgs.pipx
-    pkgs.poetry
-    pkgs.python312Packages.fastjsonschema
-    pkgs.python313
-    pkgs.qhull
-    pkgs.tcl
-    pkgs.tk
-
     # Utilities
     pkgs.htop
     pkgs.ffmpeg-full
