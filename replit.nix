@@ -9,10 +9,6 @@
     pkgs.cargo-watch
     pkgs.rust-analyzer
     pkgs.rustc
-
-    # Utilities
-    pkgs.htop
-    pkgs.ffmpeg-full
     
     # other Dependencies
       # OpenSSL
@@ -24,6 +20,10 @@
 
       # Command runner
       pkgs.just
+
+    # Utilities
+    pkgs.htop
+    pkgs.ffmpeg-full
   ];
   env = {
     # OpenSSL
