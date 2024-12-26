@@ -2,7 +2,7 @@ hidden = ["target", ".cargo", ".git"]
 run = "just run"
 
 [nix]
-channel = "stable-24_11"
+channel = "stable-24_05"
 
 [packager]
 language = "rust"
