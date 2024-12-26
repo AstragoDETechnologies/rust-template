@@ -37,3 +37,12 @@ vcs = "Git"
 ```
 
 You can then initialize a new project with this template by running `cargo generate astra`.
+
+## Replit Compatibility
+
+This template contains a basic setup for [Replit](https://replit.com/).
+
+> [!NOTE]  
+> Trying to run the code immediately after importing it or after opening the repl might result in an error. 
+> This is likely due to the rust-analyzer, which might block files necessary for rustup to update the toolchain. 
+> If you encounter this error, please be patient and try running the code again after waiting some time. 
