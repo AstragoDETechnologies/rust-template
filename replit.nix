@@ -27,6 +27,9 @@
     pkgs.ffmpeg-full
   ];
   env = {
+    # Rustup
+    RUSTUP_TOOLCHAIN = "stable";
+    
     # OpenSSL
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
     Lib = "${pkgs.openssl.dev}/lib/";
