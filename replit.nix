@@ -5,6 +5,7 @@
 	  pkgs.cargo-edit
 	  pkgs.clippy
 	  pkgs.rustfmt
+    pkgs.rustup
     pkgs.cargo-binstall
     pkgs.cargo-watch
     pkgs.rust-analyzer
