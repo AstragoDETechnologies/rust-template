@@ -43,6 +43,6 @@ build PROFILE="dev":
 
 # ===== Testing
 
-# Run the tests
+# Run the tests.
 test:
     cargo test
