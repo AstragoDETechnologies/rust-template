@@ -5,7 +5,7 @@ description = "AstragoDE's Rust Template"
 # authors = ["AstragoDE <51675359+AstragoDE@users.noreply.github.com>"]
 authors = ["{{authors}}"]
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
