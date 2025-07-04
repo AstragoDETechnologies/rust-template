@@ -31,8 +31,16 @@ error PROFILE="dev":
 
 # == Watch
 
-# Watch for file changes and re-run the program in case they change.
+# Watch for file changes using watchexec and re-run the program in case they change.
 watch RUST_LOG="default" PROFILE="dev":
+    RUST_LOG={{RUST_LOG}} watchexec -r "cargo run --profile {{PROFILE}}"
+
+# Watch for file changes using bacon and re-run the program in case they change.
+bwatch RUST_LOG="default" PROFILE="dev":
+    RUST_LOG={{RUST_LOG}} bacon run-long -- --profile {{PROFILE}}
+
+# Watch for file changes using cargo-watch (deprecated) and re-run the program in case they change.
+cwatch RUST_LOG="default" PROFILE="dev":
     RUST_LOG={{RUST_LOG}} cargo watch -c -x "run --profile {{PROFILE}}"
 
 # ===== Building
