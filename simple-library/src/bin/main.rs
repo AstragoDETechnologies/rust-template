@@ -8,7 +8,7 @@ fn main() {
     let a = 1;
     let b = 2;
 
-    let result = crate::add(a, b);
+    let result = {{crate_name}}::add(a, b);
 
     println!("{a} + {b} = {result}");
 }
