@@ -6,7 +6,7 @@ description = "A new awesome program made using AstragoDE's Rust template"
 authors = ["{{authors}}"]
 version = "0.1.0"
 edition = "2024"
-readme = "README.md"
+
 
 # ===== PROFILES =====
 

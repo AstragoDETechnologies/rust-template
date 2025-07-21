@@ -5,5 +5,10 @@ fn main() {
     // Initialize tracing (Logger)
     tracing_subscriber::fmt::init();
 
-    println!("Hello World!");
+    let a = 1;
+    let b = 2;
+
+    let result = crate::add(a, b);
+
+    println!("{a} + {b} = {result}");
 }
