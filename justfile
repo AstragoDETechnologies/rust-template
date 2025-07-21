@@ -48,9 +48,3 @@ cwatch RUST_LOG="default" PROFILE="dev":
 # Build the program.
 build PROFILE="dev":
     cargo build --profile {{PROFILE}}
-
-# ===== Testing
-
-# Run the tests.
-test:
-    cargo test
