@@ -1,0 +1,30 @@
+# See keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package]
+name = "{{crate_name}}"
+description = "A new awesome program made using AstragoDE's Rust template"
+authors = ["{{authors}}"]
+version = "0.1.0"
+edition = "2024"
+readme = "README.md"
+
+# ===== PROFILES =====
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 2
+
+[profile.release]
+opt-level = 3
+
+[profile.release.package."*"]
+opt-level = 3
+
+
+# ===== DEPENDENCIES =====
+
+[dependencies]
+tracing = "0.1.41"
+tracing-subscriber = "0.3.19"
